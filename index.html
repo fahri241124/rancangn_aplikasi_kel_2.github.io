@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fahri Ahmad Subhakti - Web Pribadi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e3c72;
+      --secondary: #2a5298;
+      --light: #f0f4f8;
+      --white: #ffffff;
+      --gray: #888;
+      --box: #e6f3ff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--light);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--white);
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 2.8em;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    nav {
+      background-color: var(--white);
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: var(--white);
+      margin-bottom: 30px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    section h2 {
+      margin-top: 0;
+      color: var(--secondary);
+      border-bottom: 2px solid var(--light);
+      padding-bottom: 10px;
+    }
+
+    .task-box {
+      background: var(--box);
+      padding: 15px 20px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .task-answer {
+      display: none;
+      padding: 10px 20px;
+      background: #fff;
+      margin-top: -10px;
+      margin-bottom: 10px;
+      border-left: 4px solid var(--primary);
+      border-radius: 0 0 10px 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: var(--gray);
+      background-color: var(--white);
+      border-top: 1px solid #ddd;
+    }
+  </style>
+  <script>
+    function toggleAnswer(id) {
+      var content = document.getElementById(id);
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>Fahri Ahmad Subhakti</h1>
+    <p>NIM: 2303010138 | Sistem Informasi - Universitas Perjuangan</p>
+  </header>
+
+  <nav>
+    <a href="#tentang">Tentang</a>
+    <a href="#tugas">Tugas</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <main>
+    <section id="tentang">
+      <h2>Tentang Saya</h2>
+      <p>Halo! Saya Fahri Ahmad Subhakti, mahasiswa program studi Sistem Informasi. Web ini dibuat sebagai bagian dari tugas matakuliah Sistem Operasi. Web ini berisi informasi pribadi saya serta daftar tugas yang telah saya kerjakan selama perkuliahan berlangsung.</p>
+    </section>
+
+    <section id="tugas">
+      <h2>Daftar Tugas Sistem Operasi</h2>
+      <div class="task-box" onclick="toggleAnswer('jawaban1')">Tugas 1 – Manajemen Proses</div>
+      <div class="task-answer" id="jawaban1">
+        Manajemen proses adalah kegiatan sistem operasi dalam mengelola proses yang sedang berjalan, termasuk penjadwalan, pembuatan, dan terminasi proses.
+      </div>
+
+      <div class="task-box" onclick="toggleAnswer('jawaban2')">Tugas 2 – Penjadwalan CPU</div>
+      <div class="task-answer" id="jawaban2">
+        Penjadwalan CPU adalah metode yang digunakan sistem operasi untuk menentukan proses mana yang akan dieksekusi oleh CPU pada suatu waktu tertentu.
+      </div>
+
+      <div class="task-box" onclick="toggleAnswer('jawaban3')">Tugas 3 – Manajemen Memori</div>
+      <div class="task-answer" id="jawaban3">
+        Manajemen memori adalah proses mengatur dan mengelola memori utama agar dapat digunakan secara efisien oleh sistem dan proses.
+      </div>
+    </section>
+
+    <section id="kontak">
+      <h2>Kontak</h2>
+      <p>Email: <a href="mailto:fahri.subhakti@example.com">fahri.subhakti@example.com</a></p>
+      <p>Alamat Web: <strong>fahri.rf.gd</strong></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Fahri Ahmad Subhakti - Web Pribadi Sistem Operasi
+  </footer>
+</body>
+
+</html>
